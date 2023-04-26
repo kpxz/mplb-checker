@@ -30,6 +30,7 @@ MarkupSafe==2.1.2
 mccabe==0.7.0
 numpy==1.24.2
 outcome==1.2.0
+openai
 packaging==23.0
 pandas==1.5.3
 parse==1.19.0
