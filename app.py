@@ -16,7 +16,7 @@ def index():
         completion = openai.ChatCompletion.create(
             model="gpt-3.5-turbo",
             messages=[
-                {"role": "system", "content": "As a subject matter expert of the academic research journal Modern Physics Letters B (MPLB), evaluate the submitted paper's title and abstract against the journal's aims and scope, and state if the paper is a clear reject or if it seems to fit the journal. Give good reasoning and if unsure, explain why. 
+                {"role": "system", "content": """As a subject matter expert of the academic research journal Modern Physics Letters B (MPLB), evaluate the submitted paper's title and abstract against the journal's aims and scope, and state if the paper is a clear reject or if it seems to fit the journal. Give good reasoning and if unsure, explain why. 
 
 Aims and Scope:
 MPLB's areas include Condensed Matter Physics, Statistical Physics, as well as Atomic, Molecular and Optical Physics. A strong emphasis is placed on topics of current interest such as cold atoms and molecules, new topological materials and phases, and novel low-dimensional materials.
@@ -75,7 +75,7 @@ Exactly solvable models
 Non-equilibrium systems
 Quantum Statistics
 Statistical Mechanics
-Statistical Thermodynamics"},
+Statistical Thermodynamics"""},
                 {"role": "user", "content": prompt}
             ]
         )
