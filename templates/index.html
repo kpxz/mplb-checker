@@ -1,26 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Manuscript Checker</title>
-    
-  </head>
-  <body>
-    <h1>MPLB: Checking Manuscript's Relevance</h1>
-    <form action="/" method="post">
-      <label for="title">Paper Title:</label><br />
-      <input type="text" id="title" name="title" required /><br />
-      <label for="abstract">Abstract:</label><br />
-      <textarea
-        id="abstract"
-        name="abstract"
-        rows="10"
-        cols="50"
-        required
-      ></textarea
-      ><br />
-      <input type="submit" value="Submit" />
-    </form>
-  </body>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Manuscript Checker</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+	<style>
+		body {
+			background-color: #f0f0f0;
+			font-family: 'Roboto', sans-serif;
+		}
+
+		.container {
+			max-width: 600px;
+			margin: 0 auto;
+			padding: 1rem;
+			background-color: #fff;
+			box-shadow: 0 0 10px rgba(0, 0, 0, .15);
+		}
+
+		h1 {
+			font-size: 2.5rem;
+			margin-top: 1rem;
+			margin-bottom: 1.5rem;
+			text-align: center;
+		}
+
+		form {
+			display: flex;
+			flex-direction: column;
+			gap: 1rem;
+		}
+
+		label {
+			font-weight: bold;
+			font-size: 1.2rem;
+			margin-bottom: 0.25rem;
+		}
+
+		input[type="text"],
+		textarea {
+			width: 100%;
+			padding: 0.5rem;
+			font-size: 1rem;
+			line-height: 1.5rem;
+			border-radius: 0.25rem;
+			border: 1px solid #ccc;
+			padding-right: 0.5rem;
+			margin-bottom: 1rem;
+			/* Add padding to the end of the text boxes */
+			padding-right: 1rem;
+		}
+
+		input[type="text"],
+		textarea {
+			box-sizing: border-box;
+		}
+
+		input[type="submit"] {
+			background-color: #4CAF50;
+			border: none;
+			color: white;
+			padding: 0.5rem 1rem;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 1rem;
+			border-radius: 0.25rem;
+			cursor: pointer;
+		}
+
+		input[type="submit"]:hover {
+			background-color: #3e8e41;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>MPLB: Manuscript Relevance</h1>
+		<form action="/" method="post">
+			<label for="title">Paper Title</label>
+			<input type="text" id="title" name="title" required>
+			<label for="abstract">Abstract</label>
+			<textarea id="abstract" name="abstract" rows="10" required style="font-family: 'Roboto', sans-serif;"></textarea>
+			<input type="submit" value="Submit">
+		</form>
+	</div>
+</body>
 </html>
